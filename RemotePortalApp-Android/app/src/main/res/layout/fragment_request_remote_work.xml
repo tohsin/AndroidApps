@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.StaffClasses.StaffRequestRemoteWork">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/lblRequestNo"
+            android:layout_width="266dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="40dp"
+            android:text="Request Remote Work "
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/textView9"
+            app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/request_work_subtitle"
+            app:layout_constraintEnd_toEndOf="@+id/spinnerBranches"
+            app:layout_constraintStart_toStartOf="@+id/textView10"
+            app:layout_constraintTop_toBottomOf="@+id/lblRequestNo" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="202dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="16dp"
+            android:text="Pick a Location"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:layout_constraintStart_toStartOf="@+id/spinnerBranches"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+        <Spinner
+            android:id="@+id/spinnerBranches"
+            android:layout_width="0dp"
+            android:layout_height="27dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/checkBox"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView11"
+            app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="182dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="28dp"
+            android:text="Select Date and Time "
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:layout_constraintStart_toStartOf="@+id/textView12"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerBranches" />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CheckBox"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:layout_constraintBottom_toBottomOf="@+id/textView11"
+            app:layout_constraintEnd_toEndOf="@+id/fromTime"
+            app:layout_constraintTop_toTopOf="@+id/textView11" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="From"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/fromDate"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="To"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:layout_constraintBottom_toTopOf="@+id/textView14"
+            app:layout_constraintStart_toStartOf="@+id/textView12"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+        <EditText
+            android:id="@+id/fromDate"
+            android:layout_width="108dp"
+            android:layout_height="40dp"
+            android:clickable="true"
+            android:ems="10"
+            android:focusable="false"
+            android:hint="From Date"
+            android:inputType="date"
+            app:layout_constraintEnd_toStartOf="@+id/fromTime"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView12"
+            app:layout_constraintTop_toTopOf="@+id/textView12" />
+
+        <EditText
+            android:id="@+id/toDate"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:clickable="true"
+            android:ems="10"
+            android:focusable="false"
+            android:hint="To Date"
+            android:inputType="date"
+            app:layout_constraintEnd_toEndOf="@+id/fromDate"
+            app:layout_constraintStart_toStartOf="@+id/fromDate"
+            app:layout_constraintTop_toTopOf="@+id/textView13" />
+
+        <EditText
+            android:id="@+id/fromTime"
+            android:layout_width="96dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:clickable="true"
+            android:ems="10"
+            android:focusable="false"
+            android:hint="From Time"
+            android:inputType="time"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/fromDate"
+            app:layout_constraintTop_toTopOf="@+id/fromDate" />
+
+        <EditText
+            android:id="@+id/toTime"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:clickable="true"
+            android:ems="10"
+            android:focusable="false"
+            android:hint="To Time"
+            android:inputType="time"
+            app:layout_constraintBottom_toBottomOf="@+id/toDate"
+            app:layout_constraintEnd_toEndOf="@+id/fromTime"
+            app:layout_constraintStart_toStartOf="@+id/fromTime" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Reason"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:layout_constraintBottom_toTopOf="@+id/txtReason"
+            app:layout_constraintStart_toStartOf="@+id/txtReason"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <EditText
+            android:id="@+id/txtReason"
+            android:layout_width="0dp"
+            android:layout_height="112dp"
+            android:layout_marginBottom="27dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Reason"
+            android:inputType="textMultiLine"
+            app:layout_constraintBottom_toTopOf="@+id/btnRequestWork"
+            app:layout_constraintEnd_toEndOf="@+id/btnRequestWork"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/btnRequestWork" />
+
+        <Button
+            android:id="@+id/btnRequestWork"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#ea5b0c"
+            android:text="Send Request "
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/btnBackRequestSuccess"
+            android:layout_width="34dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="7dp"
+            android:src="@drawable/img_left_arrow"
+            app:layout_constraintBottom_toTopOf="@+id/lblRequestNo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnMenu" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#F1DDC0">
+
+                <TextView
+                    android:id="@+id/textTodayDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    app:layout_constraintBottom_toBottomOf="@+id/textTodayTime"
+                    app:layout_constraintEnd_toStartOf="@+id/textTodayTime"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textTodayTime" />
+
+                <TextView
+                    android:id="@+id/textTodayTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="TextView"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textTodayDate"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <ImageButton
+            android:id="@+id/btnMenu"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:backgroundTint="#FFFFFF"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_open_menu"
+            app:layout_constraintBottom_toBottomOf="@+id/cardView2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cardView2" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back To Home"
+            app:layout_constraintBottom_toBottomOf="@+id/btnBackRequestSuccess"
+            app:layout_constraintStart_toEndOf="@+id/btnBackRequestSuccess"
+            app:layout_constraintTop_toTopOf="@+id/btnBackRequestSuccess" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

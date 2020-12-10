@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:padding="16dp"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="90dp"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/lblTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Decline Remote Request"
+            android:textAlignment="viewStart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView41"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Reason For Decline"
+            app:layout_constraintEnd_toEndOf="@+id/lblTitle"
+            app:layout_constraintStart_toStartOf="@+id/lblTitle"
+            app:layout_constraintTop_toBottomOf="@+id/lblTitle" />
+
+        <Spinner
+            android:id="@+id/spinnerReason"
+            android:layout_width="0dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/textView41"
+            app:layout_constraintStart_toStartOf="@+id/textView41"
+            app:layout_constraintTop_toBottomOf="@+id/textView41" />
+
+        <TextView
+            android:id="@+id/textView42"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Other"
+            app:layout_constraintEnd_toEndOf="@+id/spinnerReason"
+            app:layout_constraintStart_toStartOf="@+id/spinnerReason"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerReason" />
+
+        <EditText
+            android:id="@+id/txtReason"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            app:layout_constraintEnd_toEndOf="@+id/textView42"
+            app:layout_constraintStart_toStartOf="@+id/textView42"
+            app:layout_constraintTop_toBottomOf="@+id/textView42" />
+
+        <Button
+            android:id="@+id/btnDecline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/orangedark"
+            android:text="Decline Request"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="@+id/txtReason"
+            app:layout_constraintStart_toStartOf="@+id/txtReason"
+            app:layout_constraintTop_toBottomOf="@+id/txtReason" />
+
+        <Button
+            android:id="@+id/btnAnotherLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="#F3DBB8"
+            android:text="Suggest Another Location"
+            android:textColor="#FF5722"
+            app:layout_constraintEnd_toEndOf="@+id/btnDecline"
+            app:layout_constraintStart_toStartOf="@+id/btnDecline"
+            app:layout_constraintTop_toBottomOf="@+id/btnDecline" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="#FFFFFF"
+            android:text="@android:string/cancel"
+            android:textColor="#0727DA"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/btnAnotherLocation"
+            app:layout_constraintStart_toStartOf="@+id/btnAnotherLocation"
+            app:layout_constraintTop_toBottomOf="@+id/btnAnotherLocation" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

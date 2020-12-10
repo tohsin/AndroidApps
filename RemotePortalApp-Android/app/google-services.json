@@ -1,0 +1,83 @@
+{
+  "project_info": {
+    "project_number": "1031371654888",
+    "firebase_url": "https://accesscontrol-9591c.firebaseio.com",
+    "project_id": "accesscontrol-9591c",
+    "storage_bucket": "accesscontrol-9591c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1031371654888:android:50c4d2edf5a2a77b20eb5d",
+        "android_client_info": {
+          "package_name": "com.leadway.remoteportalapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1031371654888-l5hg14vs0km2m83srn2tnfa17p27l276.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAooN-HHLdRXBk0QG0wSLTAz_42eVJTOSw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1031371654888-l5hg14vs0km2m83srn2tnfa17p27l276.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1031371654888-dbldgc68gphfn7kbf8786ievudjvqu56.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.leadway.RemoteApp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1031371654888:android:bbd0d535d0f59fff20eb5d",
+        "android_client_info": {
+          "package_name": "com.leadway.tenency"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1031371654888-l5hg14vs0km2m83srn2tnfa17p27l276.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAooN-HHLdRXBk0QG0wSLTAz_42eVJTOSw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1031371654888-l5hg14vs0km2m83srn2tnfa17p27l276.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1031371654888-dbldgc68gphfn7kbf8786ievudjvqu56.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.leadway.RemoteApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
