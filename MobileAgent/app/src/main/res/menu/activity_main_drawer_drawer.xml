@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <group android:checkableBehavior="single"
+            android:id="@+id/group1">
+            <item
+                android:id="@+id/homeFragment"
+                android:icon="@drawable/ic_home_black_24dp"
+                android:title="@string/menu_home" />
+        </group>
+        <group  android:checkableBehavior="single"
+            android:id="@+id/group2">
+            <item
+                android:id="@+id/prospectFragment"
+                android:icon="@drawable/ic_person_black_24dp"
+                android:title="Prospect" />
+        </group>
+        <group  android:checkableBehavior="single"
+            android:id="@+id/group3">
+            <item
+                android:id="@+id/assignmentFragment"
+                android:icon="@drawable/ic_view_list_black_24dp"
+                android:title="ASSIGNMENT" />
+        </group>
+
+        <group  android:checkableBehavior="single"
+            android:id="@+id/group4">
+            <item
+                android:id="@+id/calenderFragment"
+                android:icon="@drawable/ic_date_range_black_24dp"
+                android:title="CALENDER" />
+        </group>
+        <group  android:checkableBehavior="single"
+            android:id="@+id/group5">
+            <item
+                android:id="@+id/messagesFragment"
+                android:icon="@drawable/ic_message_black_24dp"
+                android:title="MESSAGE" />
+        </group>
+        <group   android:checkableBehavior="single"
+            android:id="@+id/group6">
+            <item
+                android:id="@+id/productFragment"
+                android:icon="@drawable/ic_product"
+                android:title="Product and sales" />
+        </group>
+        <group   android:checkableBehavior="single"
+            android:id="@+id/group7">
+            <item
+                android:id="@+id/quotationFragment"
+                android:icon="@drawable/ic_tag"
+                android:title="Quotations" />
+        </group>
+        <group  android:checkableBehavior="single"
+            android:id="@+id/group8">
+            <item
+                android:id="@+id/performanceFragment"
+                android:icon="@drawable/ic_feedback_black_24dp"
+                android:title="Performance" />
+        </group>
+        <group  android:checkableBehavior="single"
+            android:id="@+id/group9">
+            <item
+                android:id="@+id/clientFragment"
+                android:icon="@drawable/ic_people_black_24dp"
+                android:title="Client" />
+        </group>
+        <group   android:checkableBehavior="single"
+            android:id="@+id/group10">
+            <item
+                android:id="@+id/cashierFragment"
+                android:icon="@drawable/ic_payment_black_24dp"
+                android:title="Cashier" />
+        </group>
+
+        <group  android:checkableBehavior="single"
+            android:id="@+id/group11">
+            <item
+                android:id="@+id/trainingFragment"
+                android:icon="@drawable/ic_school_black_24dp"
+                android:title="Training" />
+        </group>
+        <group   android:checkableBehavior="single"
+            android:id="@+id/group12">
+            <item
+                android:id="@+id/vacationFragment"
+                android:icon="@drawable/ic_card_travel_black_24dp"
+                android:title="Vacation" />
+        </group>
+        <group   android:checkableBehavior="single"
+            android:id="@+id/group13">
+            <item
+                android:id="@+id/settingFragment"
+                android:icon="@drawable/ic_settings_black_24dp"
+                android:title="Setting" />
+        </group>
+        <group   android:checkableBehavior="single"
+            android:id="@+id/group14">
+            <item
+                android:id="@+id/logoutFragment"
+                android:icon="@drawable/ic_power_settings_new_black_24dp"
+                android:title="Logout" />
+        </group>
+    </group>
+
+
+
+
+</menu>

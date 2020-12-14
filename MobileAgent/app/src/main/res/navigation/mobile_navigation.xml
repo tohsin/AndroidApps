@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/homeFragment">
+
+    <fragment
+        android:id="@+id/quotationFragment"
+        android:name="com.leadway.mobileagent.MainActivityui.QuotationFragment"
+        android:label="fragment_quotation"
+        tools:layout="@layout/fragment_quotation" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.leadway.mobileagent.MainActivityui.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/prospectFragment"
+        android:name="com.leadway.mobileagent.MainActivityui.ProspectFragment"
+        android:label="fragment_prospect"
+        tools:layout="@layout/fragment_prospect" >
+        <action
+            android:id="@+id/action_prospectFragment_to_prospectDetailFragment"
+            app:destination="@id/prospectDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/messagesFragment"
+        android:name="com.leadway.mobileagent.MainActivityui.MessagesFragment"
+        android:label="fragment_messages"
+        tools:layout="@layout/fragment_messages" >
+        <argument
+            android:name="isfromprospect"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/productFragment"
+        android:name="com.leadway.mobileagent.MainActivityui.ProductFragment"
+        android:label="fragment_product"
+        tools:layout="@layout/fragment_product" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.leadway.mobileagent.MainActivityui.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/assignmentFragment"
+        android:name="com.leadway.mobileagent.MainActivityui.AssignmentFragment"
+        android:label="fragment_assignment"
+        tools:layout="@layout/fragment_assignment" />
+    <fragment
+        android:id="@+id/vacationFragment"
+        android:name="com.leadway.mobileagent.MainActivityui.VacationFragment"
+        android:label="fragment_vacation"
+        tools:layout="@layout/fragment_vacation" />
+    <fragment
+        android:id="@+id/clientFragment"
+        android:name="com.leadway.mobileagent.MainActivityui.ClientFragment"
+        android:label="fragment_client"
+        tools:layout="@layout/fragment_client" />
+    <fragment
+        android:id="@+id/cashierFragment"
+        android:name="com.leadway.mobileagent.MainActivityui.CashierUi.CashierFragment"
+        android:label="fragment_cashier"
+        tools:layout="@layout/fragment_cashier" >
+        <action
+            android:id="@+id/action_cashierFragment_to_makepaymentFragment"
+            app:destination="@id/makepaymentFragment" />
+        <action
+            android:id="@+id/action_cashierFragment_to_pendingpaymentsFragment"
+            app:destination="@id/pendingpaymentsFragment" />
+        <action
+            android:id="@+id/action_cashierFragment_to_cashoutFragment"
+            app:destination="@id/cashoutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/trainingFragment"
+        android:name="com.leadway.mobileagent.MainActivityui.TrainingFragment"
+        android:label="fragment_training"
+        tools:layout="@layout/fragment_training" />
+    <fragment
+        android:id="@+id/makepaymentFragment"
+        android:name="com.leadway.mobileagent.MainActivityui.CashierUi.MakepaymentFragment"
+        android:label="fragment_makepayment"
+        tools:layout="@layout/fragment_makepayment" />
+    <fragment
+        android:id="@+id/pendingpaymentsFragment"
+        android:name="com.leadway.mobileagent.MainActivityui.CashierUi.Pendingpaymentui.PendingpaymentsFragment"
+        android:label="fragment_pendingpayments"
+        tools:layout="@layout/fragment_pendingpayments" />
+    <fragment
+        android:id="@+id/cashoutFragment"
+        android:name="com.leadway.mobileagent.MainActivityui.CashierUi.CashoutFragment"
+        android:label="fragment_cashout"
+        tools:layout="@layout/fragment_cashout" />
+    <fragment
+        android:id="@+id/calenderFragment"
+        android:name="com.leadway.mobileagent.CalenderFragment"
+        android:label="fragment_calender"
+        tools:layout="@layout/fragment_calender" />
+    <fragment
+        android:id="@+id/performanceFragment"
+        android:name="com.leadway.mobileagent.PerformanceFragment"
+        android:label="fragment_performance"
+        tools:layout="@layout/fragment_performance" />
+    <fragment
+        android:id="@+id/prospectDetailFragment"
+        android:name="com.leadway.mobileagent.MainActivityui.ProspectDetailFragment"
+        android:label="fragment_prospect_detail"
+        tools:layout="@layout/fragment_prospect_detail" >
+        <action
+            android:id="@+id/action_prospectDetailFragment_to_quotationFragment"
+            app:destination="@id/quotationFragment" />
+        <action
+            android:id="@+id/action_prospectDetailFragment_to_messagesFragment"
+            app:destination="@id/messagesFragment" />
+    </fragment>
+</navigation>
