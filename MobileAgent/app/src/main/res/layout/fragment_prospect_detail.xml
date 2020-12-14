@@ -404,14 +404,15 @@
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="0dp"
             android:id="@+id/product_of_intrest_recycler"
+            android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="1dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/divider9"
-            app:layout_constraintTop_toBottomOf="@+id/divider10" />
+            app:layout_constraintTop_toBottomOf="@+id/divider10"
+            tools:listitem="@layout/product_intrest_row" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout

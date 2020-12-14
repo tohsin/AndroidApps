@@ -47,7 +47,6 @@ public class ProspectAdaptor extends RecyclerView.Adapter<ProspectAdaptor.MyView
         holder.date_.setText(dates[position]);
         holder.name_.setText(names[position]);
         holder.desciption_.setText(desciptions[position]);
-
         holder.item.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

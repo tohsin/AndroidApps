@@ -33,6 +33,12 @@
             android:name="isfromprospect"
             app:argType="boolean"
             android:defaultValue="false" />
+        <action
+            android:id="@+id/action_messagesFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+        <action
+            android:id="@+id/action_messagesFragment_to_emailPageFragment"
+            app:destination="@id/emailPageFragment" />
     </fragment>
     <fragment
         android:id="@+id/productFragment"
@@ -116,4 +122,14 @@
             android:id="@+id/action_prospectDetailFragment_to_messagesFragment"
             app:destination="@id/messagesFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.leadway.mobileagent.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" />
+    <fragment
+        android:id="@+id/emailPageFragment"
+        android:name="com.leadway.mobileagent.EmailPageFragment"
+        android:label="fragment_email_page"
+        tools:layout="@layout/fragment_email_page" />
 </navigation>

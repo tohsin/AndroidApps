@@ -2,63 +2,58 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_margin="10dp"
-    android:orientation="vertical"
+
     android:id="@+id/product_intrest_constraint"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/product_intrest_card"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="10dp"
-        android:layout_marginBottom="652dp"
-        app:cardCornerRadius="5dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="7dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="7dp"
-            android:weightSum="100"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp">
 
             <TextView
-
+                android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="40"
-                android:layout_margin="1dp"
-                android:id="@+id/product_intrest_title"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp"
-                android:text="Educational Saving Plan"
-                android:textColor="@color/black" />
+                android:layout_marginStart="10dp"
+                android:maxWidth="120sp"
+                android:text="EDUCATIONAL SAVING PLAN"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-
-                android:id="@+id/product_intrest_acronym"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="1dp"
-                android:paddingTop="3dp"
-                android:layout_weight="40"
-                android:text="ESP"
+                android:id="@+id/textView8"
                 android:textColor="@color/gray"
-                android:textSize="8sp" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="ESP"
+                app:layout_constraintStart_toStartOf="@+id/textView2"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
             <View
-
+                android:id="@+id/divider11"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_weight="20"
-                android:background="@color/black" />
+                android:background="?android:attr/listDivider"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </LinearLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+

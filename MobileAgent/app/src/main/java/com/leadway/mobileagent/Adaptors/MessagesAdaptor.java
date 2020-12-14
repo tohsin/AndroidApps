@@ -4,23 +4,30 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListAdapter;
+import android.widget.ListPopupWindow;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.leadway.mobileagent.Helperclass.MessageItem;
 import com.leadway.mobileagent.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MessagesAdaptor extends RecyclerView.Adapter<MessagesAdaptor.MyViewHolder> {
 
     Context context;
-    String[] names;
-    String[] desciptions;
-    public MessagesAdaptor(Context ct, String n[], String desciption[]){
+    private List<MessageItem> mMessageItems;
+    String Page;
+    public MessagesAdaptor(Context ct, List<MessageItem> item,String tab){
         context=ct;
-        names=n;
-        desciptions=desciption;
-
+        mMessageItems=item;
+        Page=tab;
     }
 
     @NonNull
@@ -28,32 +35,50 @@ public class MessagesAdaptor extends RecyclerView.Adapter<MessagesAdaptor.MyView
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         View view = LayoutInflater.from(context)
-                .inflate(R.layout.assignment_row,parent, false);
-//        LayoutInflater layoutInflater= LayoutInflater.from(context);
-//        View view=layoutInflater.inflate(R.layout.prospect_row,parent,false);
+                .inflate(R.layout.messages_row,parent, false);
         return new  MyViewHolder(view) ;
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.name_.setText(names[position]);
-        holder.desciption_.setText(desciptions[position]);
+        MessageItem messageItem=mMessageItems.get(position);
+        holder.nameTextView.setText(messageItem.getName());
+        holder.desciptionTextView.setText(messageItem.getDescription());
+        holder.dateTextView.setText(messageItem.getDate());
+        holder.cardItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Page.equals("Email")){
+                    Navigation.findNavController(v).navigate(R.id.action_messagesFragment_to_emailPageFragment);
+                }else if(Page.equals("Activities")){
+                    Navigation.findNavController(v).navigate(R.id.action_messagesFragment_to_chatFragment);
+                }
+
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
 
-        return names.length;
+        return mMessageItems.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
-        private TextView name_,desciption_;
+        private TextView nameTextView,desciptionTextView,dateTextView;
+        private CardView cardItem;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            name_=itemView.findViewById(R.id.assignment_name);
-            desciption_=itemView.findViewById(R.id.assignment_description);
+            nameTextView=itemView.findViewById(R.id.messages_name);
+            dateTextView=itemView.findViewById(R.id.messages_date);
+            desciptionTextView=itemView.findViewById(R.id.messages_description);
+            cardItem=itemView.findViewById(R.id.messages_card);
 
         }
+    }
+    public void changeDateSet(ArrayList<MessageItem> aDataList){
+        mMessageItems = aDataList;
+        notifyDataSetChanged();
     }
 }
